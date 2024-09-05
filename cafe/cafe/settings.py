@@ -28,7 +28,8 @@ INSTALLED_APPS = [
 
     # my apps
     "user.apps.UserConfig",
-    "blog.apps.BlogConfig"
+    "blog.apps.BlogConfig",
+    "sort.apps.SortConfig"
 ]
 
 MIDDLEWARE = [
