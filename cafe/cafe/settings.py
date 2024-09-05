@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     # my apps
     "user.apps.UserConfig",
+    "mediastore.apps.MediastoreConfig",
     "blog.apps.BlogConfig",
     "sort.apps.SortConfig"
 ]
