@@ -37,7 +37,7 @@ class Article(models.Model):
 
     class Meta:
         ordering = ('last_modified',)
-        
+
 
 
 class BlogComment(models.Model):
@@ -46,6 +46,6 @@ class BlogComment(models.Model):
     full_name = models.CharField(max_length=200)
     message = models.TextField(max_length=500)
     show = models.BooleanField(default=False)
-    
+
     def __str__(self):
         return f"{self.article.title} - {self.full_name} - {self.email}"

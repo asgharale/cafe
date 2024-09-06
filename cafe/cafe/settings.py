@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # my apps
     "user.apps.UserConfig",
     "mediastore.apps.MediastoreConfig",
+    "store.apps.StoreConfig",
     "blog.apps.BlogConfig",
     "sort.apps.SortConfig"
 ]
@@ -119,3 +120,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # User Model
 AUTH_USER_MODEL = 'user.CUser'
+
+
+# media and static files
+STATIC_URL = "static/"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
