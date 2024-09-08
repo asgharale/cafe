@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block head %}
+	{% endblock %}
+</head>
+<body>
+	<header>
+		<div class="">
+			<div class="brand">
+				<h1>کافه وب</h1>
+				<p><strong>جایی برای ریلکس کردن وب گردان!</strong></p>
+			</div>
+			<div class="nav-content">
+				<div class="search-bar">
+					<button>search</button>	
+				</div>
+				<div class="info">
+					<a href="">shop</a>
+					<a href="">blog</a>
+					<a href="">login</a>
+				</div>
+			</div>
+		</div>
+		{% block header %}{% endblock %}
+	</header>
+	
+	{% block content%}
+	{% endblock %}
+
+	<footer>
+		{% block footer %}{% endblock %}
+		<div class="">
+			<div class="half-of-footer">
+				logos
+			</div>
+			<div class="25-percent-of-footer">
+				contact us
+				hiring!
+			</div>
+			<div class="25-percent-of-footer">
+				website parts
+			</div>
+		</div>
+		<p>all rights ar reserved 2024 CAFE WEB</p>
+	</footer>
+</body>
+</html>
