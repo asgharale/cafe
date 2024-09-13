@@ -1,8 +1,28 @@
-/* blog header */
+/* base  */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.icon-l{
+	font-size: 25px;
+}
+i:hover{
+	color: gray;
+}
 
+/* blog header */
+.account-header span{
+	margin-inline: 3px;
+}
 
 /* blog btn  */
-.btn0{}
+.btn0{
+
+}
+.btn0:hover{
+
+}
 .btn1{
 	width: 35%;
 	height: 45px;
@@ -16,4 +36,34 @@
 .btn1:hover{
 	background-color: lightblue;
 	transition: 0.5s;
+}
+.btn2{
+	height: 45px;
+	width: 100px;
+	background-color: whitesmoke;
+	margin-right: -10px;
+	border: 2px solid whitesmoke;
+	font-weight: 600;
+}
+.btn2:hover{
+	background-color: darkgray;
+	color: whitesmoke;
+	border: darkgray solid 2px;
+}
+
+/* blog footer */
+footer{
+	background-color: black;
+	color: whitesmoke;
+}
+.email{
+	height: 45px;
+	width: 50%;
+	border: 2px solid white;
+	outline: none;
+	color: black;
+	margin-top: 20px;
+	background-color: whitesmoke;
+	font-weight: 600;
+	padding-inline: 10px;
 }

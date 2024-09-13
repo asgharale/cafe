@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     
     # third party apps
     "bootstrap5",
+    "fontawesomefree",
 
     # my apps
     "user.apps.UserConfig",

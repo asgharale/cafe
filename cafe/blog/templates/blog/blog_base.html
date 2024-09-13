@@ -5,8 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{% static 'css/blog/main.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 	{% block head %}
 	{% endblock %}
+
 	{% load bootstrap5 %}
 	{% bootstrap_css %}
 	{% bootstrap_javascript %}
@@ -23,25 +27,25 @@
 				<div class="col-sm-7 col-10">
 					<form class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
+						<button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-search"></i></button>
 					</form>
 				</div>
-				<div class="col-sm-2 col-2">
-					LOG<span class="d-none d-sm-none d-md-inline">-login</span>
+				<div class="col-sm-2 col-2 account-header">
+					<i class="fa-solid fa-user"></i><span class="d-none d-sm-none d-md-inline">حساب کاربری</span>
 				</div>
 			</div>
 		</nav>
 		{% block header %}{% endblock %}
 	</header>
 
-	<section class="article-slides">
-		<div class="container">
-			<div class="row m-auto text-center">
+	<section class="article-slides my-2">
+		<div class="container py-4">
+			<div class="row m-auto text-center mb-4">
 				<strong><p class="h1">جدید ترین ها</p></strong>
-				<b style="color: cadetblue;">آخرین مقالات</b>
+				<b style="color: cadetblue;" class="my-2">آخرین مقالات</b>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 text-center">
+				<div class="col-lg-3 my-1 text-center">
 					<div class="card border-0 bg-light">
 						<div class="card-body">
 							<img src="" class="img-fluid" alt="">
@@ -50,7 +54,7 @@
 						<p>comments - views - likes</p>
 					</div>
 				</div>
-				<div class="col-lg-3 text-center">
+				<div class="col-lg-3 my-1 text-center">
 					<div class="card border-0 bg-light">
 						<div class="card-body">
 							<img src="" class="img-fluid" alt="">
@@ -59,7 +63,7 @@
 						<p>comments - views - likes</p>
 					</div>
 				</div>
-				<div class="col-lg-3 text-center">
+				<div class="col-lg-3 my-1 text-center">
 					<div class="card border-0 bg-light">
 						<div class="card-body">
 							<img src="" class="img-fluid" alt="">
@@ -68,7 +72,7 @@
 						<p>comments - views - likes</p>
 					</div>
 				</div>
-				<div class="col-lg-3 text-center">
+				<div class="col-lg-3 my-1 text-center">
 					<div class="card border-0 bg-light">
 						<div class="card-body">
 							<img src="" class="img-fluid" alt="">
@@ -77,19 +81,51 @@
 						<p>comments - views - likes</p>
 					</div>
 				</div>
-				<div class="col-lg-3">
-					<div class="card border-0 bg-light">
-						<div class="card-body">
-							<img src="" class="img-fluid" alt="">
-						</div>
-						<h6>article title</h6>
-						<p>comments - views - likes</p>
-					</div>
-				</div>
+
 			</div>
-			<div class="row">
+			<div class="row mt-2">
 				<div class="col-6 text-center m-auto">
 					<button class="btn1">بیشتر....</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="most-viewed">
+		<div class="container py-4">
+			<div class="row">
+				<div class="m-auto text-center">
+					<p class="h1">بیتشرین بازدید</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h5>article title</h5>
+						<p>article meta data and some more on extra texts just to make this a lot!</p>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h5>article title</h5>
+						<p>article meta data and some more on extra texts just to make this a lot!</p>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h5>article title</h5>
+						<p>article meta data and some more on extra texts just to make this a lot!</p>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h5>article title</h5>
+						<p>article meta data and some more on extra texts just to make this a lot!</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -102,22 +138,70 @@
 		</aside>	
 	</section>
 
-	<footer>
-		{% block footer %}{% endblock %}
-
-		<div class="">
-			<div class="half-of-footer">
-				logos
+	<section class="shop">
+		<div class="container py-5">
+			<div class="row py-3">
+				<div class="m-auto text-center">
+					<h4 class="h1">فروشگاه کافه وب</h4>
+				</div>
 			</div>
-			<div class="25-percent-of-footer">
-				contact us
-				hiring!
-			</div>
-			<div class="25-percent-of-footer">
-				website parts
+			<div class="row">
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h4>product title</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h4>product title</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h4>product title</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 my-1">
+					<div class="card border-0 bg-light">
+						<img src="" alt="" class="img-fluid">
+						<h4>product title</h4>
+					</div>
+				</div>
 			</div>
 		</div>
-		<p>all rights ar reserved 2024 CAFE WEB</p>
+	</section>
+
+	<footer class="footer py-3 px-3">
+		{% block footer %}{% endblock %}
+		<div class="container py-5">
+			<div class="row mb-3">
+				<div class="col-lg-9 m-auto text-center">
+					<p class="h3">به چنل خبری ما بپیوندید تو در دنیای برنامه نویسی آپدیت بمانید!</p>
+					<input type="email" name="email" class="email px-3" placeholder="ایمیل">
+					<button class="btn2">ارسال</button>
+				</div>
+			</div>
+			<div class="row my-3">
+				<div class="col-lg-3 m-auto text-center">
+					<p>تماس با ما</p>
+					<i class="fa-solid fa-user mx-1 icon-l"></i>
+					<i class="fa-brands fa-telegram mx-1 icon-l"></i>
+					<i class="fa-brands fa-instagram mx-1 icon-l"></i>
+					<i class="fa-brands fa-github mx-1 icon-l"></i>
+				</div>
+				<div class="col-lg-3 m-auto text-center">
+					<p>website parts</p>
+				</div>
+				<div class="col-lg-6 m-auto text-center">
+					logo
+				</div>
+			</div>
+		</div>
+		<hr>
+		<p align="center p-2" class="text-center">تمامی حقوق محفوظ است. کافه وب 1404</p>
 	</footer>
 </body>
 </html>
