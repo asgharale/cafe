@@ -1,0 +1,19 @@
+/* blog header */
+
+
+/* blog btn  */
+.btn0{}
+.btn1{
+	width: 35%;
+	height: 45px;
+	border: none;
+	outline: none;
+	background-color: deepskyblue;
+	color: whitesmoke;
+	font-weight: 500;
+	border-radius: 60px;
+}
+.btn1:hover{
+	background-color: lightblue;
+	transition: 0.5s;
+}

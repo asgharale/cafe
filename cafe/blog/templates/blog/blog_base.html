@@ -1,37 +1,110 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'css/blog/main.css' %}">
 	{% block head %}
 	{% endblock %}
+	{% load bootstrap5 %}
+	{% bootstrap_css %}
+	{% bootstrap_javascript %}
 </head>
-<body>
+<body id="body" dir="rtl" lang="fa">
 	<header>
-		<div class="">
-			<div class="brand">
-				<h1>کافه وب</h1>
-				<p><strong>جایی برای ریلکس کردن وب گردان!</strong></p>
-			</div>
-			<div class="nav-content">
-				<div class="search-bar">
-					<button>search</button>	
+		<nav class="navbar sticky-top bg-light navbar-light navbar-expand-lg">
+			<div class="container-fluid row text-sm-center">
+				<div class="col-sm-3 d-none d-sm-block">
+					<h1>
+						<a class="navbar-brand" href="#">کافه وب</a>
+					</h1>
 				</div>
-				<div class="info">
-					<a href="">shop</a>
-					<a href="">blog</a>
-					<a href="">login</a>
+				<div class="col-sm-7 col-10">
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+				<div class="col-sm-2 col-2">
+					LOG<span class="d-none d-sm-none d-md-inline">-login</span>
+				</div>
+			</div>
+		</nav>
+		{% block header %}{% endblock %}
+	</header>
+
+	<section class="article-slides">
+		<div class="container">
+			<div class="row m-auto text-center">
+				<strong><p class="h1">جدید ترین ها</p></strong>
+				<b style="color: cadetblue;">آخرین مقالات</b>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 text-center">
+					<div class="card border-0 bg-light">
+						<div class="card-body">
+							<img src="" class="img-fluid" alt="">
+						</div>
+						<h6>article title</h6>
+						<p>comments - views - likes</p>
+					</div>
+				</div>
+				<div class="col-lg-3 text-center">
+					<div class="card border-0 bg-light">
+						<div class="card-body">
+							<img src="" class="img-fluid" alt="">
+						</div>
+						<h6>article title</h6>
+						<p>comments - views - likes</p>
+					</div>
+				</div>
+				<div class="col-lg-3 text-center">
+					<div class="card border-0 bg-light">
+						<div class="card-body">
+							<img src="" class="img-fluid" alt="">
+						</div>
+						<h6>article title</h6>
+						<p>comments - views - likes</p>
+					</div>
+				</div>
+				<div class="col-lg-3 text-center">
+					<div class="card border-0 bg-light">
+						<div class="card-body">
+							<img src="" class="img-fluid" alt="">
+						</div>
+						<h6>article title</h6>
+						<p>comments - views - likes</p>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="card border-0 bg-light">
+						<div class="card-body">
+							<img src="" class="img-fluid" alt="">
+						</div>
+						<h6>article title</h6>
+						<p>comments - views - likes</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 text-center m-auto">
+					<button class="btn1">بیشتر....</button>
 				</div>
 			</div>
 		</div>
-		{% block header %}{% endblock %}
-	</header>
-	
-	{% block content%}
-	{% endblock %}
+	</section>
+
+	<section class="main-section">
+		{% block content%}{% endblock %}
+		<aside class="sidebar">
+			
+		</aside>	
+	</section>
 
 	<footer>
 		{% block footer %}{% endblock %}
+
 		<div class="">
 			<div class="half-of-footer">
 				logos

@@ -26,8 +26,8 @@ class Product(models.Model):
     thumbnail = models.ImageField(upload_to="store/products/%Y-%m", max_length=500)
     meta = models.TextField(max_length=400)
     exist = models.BooleanField(default=False)
-    images = models.ManyToManyField("mediastore.Image")
-    videos = models.ManyToManyField("mediastore.Video")
+    images = models.ManyToManyField("mediastore.Image", blank=True)
+    videos = models.ManyToManyField("mediastore.Video", blank=True)
 
     categories = models.ManyToManyField("sort.Category", blank=True)
     Tags = models.ManyToManyField("sort.Tag", blank=True)

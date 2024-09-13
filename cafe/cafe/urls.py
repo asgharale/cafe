@@ -7,3 +7,8 @@ urlpatterns = [
     path("user/", include("user.urls")),
     path("sort", include("sort.urls")),
 ]
+
+# admin side custom
+admin.site.site_title = "CAFE WEB"
+admin.site.site_header = "CAFE WEB ADMINISTRATION"
+admin.site.index_title = "CAFE WEB admin side"
