@@ -4,7 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="{% static 'css/blog/main.css' %}">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog/main.css' %}">
+	<!-- fontawesome -->
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
@@ -19,19 +24,25 @@
 	<header>
 		<nav class="navbar sticky-top bg-light navbar-light navbar-expand-lg">
 			<div class="container-fluid row text-sm-center">
-				<div class="col-sm-3 d-none d-sm-block">
-					<h1>
-						<a class="navbar-brand" href="#">کافه وب</a>
+				<div class="col-sm-5 d-none d-sm-block">
+					<h1 class="mx-1">
+						<a class="b fs-4 fw-bolder navbar-brand" href="#">کافه وب</a>
 					</h1>
+					<div class="menu">
+						<ul>
+							<li>بلاگ</li>
+							<li>فروشگاه</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col-sm-7 col-10">
+				<div class="col-sm-5 col-10">
 					<form class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-search"></i></button>
 					</form>
 				</div>
 				<div class="col-sm-2 col-2 account-header">
-					<i class="fa-solid fa-user"></i><span class="d-none d-sm-none d-md-inline">حساب کاربری</span>
+					<i class="fa-solid fa-user"></i><span class="b d-none d-sm-none d-md-inline">حساب کاربری</span>
 				</div>
 			</div>
 		</nav>
@@ -41,7 +52,7 @@
 	<section class="article-slides my-2">
 		<div class="container py-4">
 			<div class="row m-auto text-center mb-4">
-				<strong><p class="h1">جدید ترین ها</p></strong>
+				<strong><p class="h3">جدید ترین ها</p></strong>
 				<b style="color: cadetblue;" class="my-2">آخرین مقالات</b>
 			</div>
 			<div class="row">
@@ -174,26 +185,28 @@
 		</div>
 	</section>
 
-	<footer class="footer py-3 px-3">
+	<footer id="footer" class=".bg-dark py-3 px-3">
 		{% block footer %}{% endblock %}
 		<div class="container py-5">
 			<div class="row mb-3">
 				<div class="col-lg-9 m-auto text-center">
-					<p class="h3">به چنل خبری ما بپیوندید تو در دنیای برنامه نویسی آپدیت بمانید!</p>
+					<p class="h4">به چنل خبری ما بپیوندید تو در دنیای برنامه نویسی آپدیت بمانید!</p>
 					<input type="email" name="email" class="email px-3" placeholder="ایمیل">
 					<button class="btn2">ارسال</button>
 				</div>
 			</div>
 			<div class="row my-3">
 				<div class="col-lg-3 m-auto text-center">
-					<p>تماس با ما</p>
-					<i class="fa-solid fa-user mx-1 icon-l"></i>
-					<i class="fa-brands fa-telegram mx-1 icon-l"></i>
-					<i class="fa-brands fa-instagram mx-1 icon-l"></i>
-					<i class="fa-brands fa-github mx-1 icon-l"></i>
+					<a class="d-block" href="">تماس با  ما</a>
+					<a href=""><i class="fa-solid fa-user mx-1 icon-l"></i></a>
+					<a href=""><i class="fa-brands fa-telegram mx-1 icon-l"></i></a>
+					<a href=""><i class="fa-brands fa-instagram mx-1 icon-l"></i></a>
+					<a href=""><i class="fa-brands fa-github mx-1 icon-l"></i></a>
+					<a class="d-block" href="">درباره ما</a>
 				</div>
 				<div class="col-lg-3 m-auto text-center">
-					<p>website parts</p>
+					<a class="d-block" href="">فروشگاه کافه وب</a>
+					<a class="d-block" href="">مجله کافه وب</a>
 				</div>
 				<div class="col-lg-6 m-auto text-center">
 					logo
@@ -201,7 +214,7 @@
 			</div>
 		</div>
 		<hr>
-		<p align="center p-2" class="text-center">تمامی حقوق محفوظ است. کافه وب 1404</p>
+		<p align="center p-2" class="text-center">تمامی حقوق محفوظ است © کافه وب  ١٤٠٤</p>
 	</footer>
 </body>
 </html>

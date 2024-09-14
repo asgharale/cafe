@@ -1,0 +1,9 @@
+#footer{
+	background-color: #302f2f;
+}
+#footer a{
+	text-decoration: none !important;
+}
+#footer a:hover{
+	text-decoration: underline;
+}

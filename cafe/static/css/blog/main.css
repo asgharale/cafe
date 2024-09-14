@@ -1,16 +1,3 @@
-/* base  */
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-.icon-l{
-	font-size: 25px;
-}
-i:hover{
-	color: gray;
-}
-
 /* blog header */
 .account-header span{
 	margin-inline: 3px;

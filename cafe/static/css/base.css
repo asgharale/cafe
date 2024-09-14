@@ -1,0 +1,34 @@
+@font-face{
+	font-family: "IranSans";
+	src: url('webfont.eot');
+	src:
+		url("../assets/fonts/IranianSans.ttf") format("truetype"),
+		url("../assets/fonts/IranianSans.eot") format("embedded-opentype"),
+		url("../assets/fonts/IranianSans.woff") format("woff"),
+		url("../assets/fonts/IranianSans.woff2") format("woff2");
+}
+@font-face{
+	font-family: "Farhang";
+	src: url('webfont.eot');
+	src:
+		url("../assets/fonts/Farhang.ttf") format("truetype"),
+		url("../assets/fonts/Farhang.eot") format("embedded-opentype"),
+		url("../assets/fonts/Farhang.woff") format("woff"),
+		url("../assets/fonts/Farhang.woff2") format("woff2");
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "IranSans", sans-serif;
+	text-decoration: none;
+}
+.far-font{
+	font-family: "Farhang";
+}
+.b{
+	font-weight: bold;
+}
+.i{
+	font-style: italic;
+}

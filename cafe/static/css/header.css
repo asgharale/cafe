@@ -1,0 +1,10 @@
+header .menu{
+	display: inline;
+}
+header .menu ul{
+	list-style-type: none;
+	display: inline;
+}
+header .menu ul li{
+	display: inline;
+}
